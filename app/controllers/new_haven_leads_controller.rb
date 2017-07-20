@@ -28,8 +28,8 @@ class NewHavenLeadsController < ApplicationController
 
     respond_to do |format|
       if @new_haven_lead.save
-        format.html { redirect_to @new_haven_lead, notice: 'New haven lead was successfully created.' }
-        format.json { render :show, status: :created, location: @new_haven_lead }
+        format.html { redirect_to '/grayscales/thank_you', notice: 'Welcome to the club!.' }
+        format.json { render '/grayscales/thank_you', status: :created, location: '/grayscales/thank_you' }
       else
         format.html { render :new }
         format.json { render json: @new_haven_lead.errors, status: :unprocessable_entity }

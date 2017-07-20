@@ -189,6 +189,56 @@ a:focus {
     }
 }
 
+.thank-you-intro {
+    display: table;
+    width: 100%;
+    height: auto;
+    
+    padding: 100px 0;
+    text-align: center;
+    color: #fff;
+    
+    background-image:
+        linear-gradient(
+            rgba(0,0,0,0.2),
+            rgba(0,0,0,0.2)
+        ),
+        url('/assets/grayscale/red_lettuce.jpg');
+    background-color: #000;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    -o-background-size: cover;
+}
+
+.thank-you-intro .intro-body {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.thank-you-intro .intro-body .brand-heading {
+    font-size: 40px;
+}
+
+.thank-you-intro .intro-body .intro-text {
+    font-size: 18px;
+}
+
+@media(min-width:768px) {
+    .thank-you-intro {
+        height: 100%;
+        padding: 0;
+    }
+
+    .thank-you-intro .intro-body .brand-heading {
+        font-size: 100px;
+    }
+
+    .thank-you-intro .intro-body .intro-text {
+        font-size: 26px;
+    }
+}
+
 .btn-circle {
     width: 70px;
     height: 70px;
@@ -425,11 +475,18 @@ body {
     margin-bottom: 6px;
 }
 
-.btn-default{
+.btn-submit{
     width:100%;
+    height: 39px;
     background-color:#42dca3;
-    color: white;
-
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;  
+    font-family: Helvetica;
+    font-size: 18px;
+    font-weight:900;
+    color:black;
+    text-shadow: 0 1px 0 white;
 }
 
 p {
