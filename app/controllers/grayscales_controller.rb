@@ -5,5 +5,6 @@ class GrayscalesController < ApplicationController
 
     def form_land
     	@lead = Lead.new
+    	@new_haven_lead = NewHavenLead.new
     end
 end

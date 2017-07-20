@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @new_haven_lead.name %>
+</p>
+
+<p>
+  <strong>Fav veg:</strong>
+  <%= @new_haven_lead.fav_veg %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @new_haven_lead.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @new_haven_lead.phone %>
+</p>
+
+<p>
+  <strong>Zip:</strong>
+  <%= @new_haven_lead.zip %>
+</p>
+
+<p>
+  <strong>Space:</strong>
+  <%= @new_haven_lead.space %>
+</p>
+
+<%= link_to 'Edit', edit_new_haven_lead_path(@new_haven_lead) %> |
+<%= link_to 'Back', new_haven_leads_path %>

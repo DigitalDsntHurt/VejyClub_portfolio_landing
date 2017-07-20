@@ -1,0 +1,2 @@
+class SimpleLead < ApplicationRecord
+end

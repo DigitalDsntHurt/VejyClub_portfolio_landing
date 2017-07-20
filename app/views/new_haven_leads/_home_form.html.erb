@@ -1,0 +1,41 @@
+<%= form_for(new_haven_lead) do |f| %>
+  <% if new_haven_lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(new_haven_lead.errors.count, "error") %> prohibited this new_haven_lead from being saved:</h2>
+
+      <ul>
+      <% new_haven_lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.text_field :name, :value => "Name" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :fav_veg, :value => "Your 3-5 favorite vegetables" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :email, :value => "Email" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :phone, :value => "Phone"  %>
+  </div>
+
+  <div class="field">
+    <%= f.text_field :zip, :value => "Zip Code" %>
+  </div>
+
+  <div class="field">
+    <%= f.text_area :space, :value => "Tell us about the space you have for growing." %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Join Vejy Club", :class => "btn-default" %>
+  </div>
+<% end %>

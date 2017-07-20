@@ -1,0 +1,47 @@
+<%= form_for(new_haven_lead) do |f| %>
+  <% if new_haven_lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(new_haven_lead.errors.count, "error") %> prohibited this new_haven_lead from being saved:</h2>
+
+      <ul>
+      <% new_haven_lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :fav_veg %>
+    <%= f.text_field :fav_veg %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :zip %>
+    <%= f.number_field :zip %>
+  </div>
+
+  <div class="field">
+    <%= f.label :space %>
+    <%= f.text_area :space %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

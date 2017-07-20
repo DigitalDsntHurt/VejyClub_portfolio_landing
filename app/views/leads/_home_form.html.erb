@@ -13,22 +13,20 @@
   <% end %>
 
   <div class="field form-group">
-    <%= f.text_field :name, :value => "  Your Name " %>
+    <%= f.text_field :name, :value => "Name" %>
   </div>
 
   <div class="field form-group">
-    <%= f.text_field :fav_veg, :value => "  Your 5 Favorite Vegetables" %>
+    <%= f.text_field :fav_veg, :value => "Your 3-5 Favorite Vegetables" %>
   </div>
 
   <div class="field form-group">
-    <%= f.text_field :notes, :value => "  Your Zip code " %>
+    <%= f.text_field :notes, :value => "Zip code" %>
   </div>
 
   <div class="field form-group">
-    <%= f.text_field :space, :value => "  Tell us about the space you have for growing" %>
-  </div>
-
-  
+    <%= f.text_area :space, :value => "Tell us about the space you have for growing" %>
+  </div>  
 
   <div class="actions">
     <%= f.submit "Join Vejy Club!", :class => "btn-default" %>

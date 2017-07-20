@@ -1,0 +1,17 @@
+<%= form_for(simple_lead) do |f| %>
+  <% if simple_lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(simple_lead.errors.count, "error") %> prohibited this simple_lead from being saved:</h2>
+
+      <ul>
+      <% simple_lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

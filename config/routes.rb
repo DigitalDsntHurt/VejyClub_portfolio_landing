@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :new_haven_leads
+  resources :simple_leads
   resources :leads
 	get 'grayscales/index'
 	get 'grayscales/form_land'
