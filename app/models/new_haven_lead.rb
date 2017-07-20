@@ -9,6 +9,15 @@ class NewHavenLead < ApplicationRecord
 		#@pwd = "SilverDollarBroccoli"
 		@uname = ENV["GMAIL_USERNAME"]
 		@pwd = ENV["GMAIL_PASSWORD"]
+		puts "\n\n============\n\n"
+		p "output"
+		p ENV["GMAIL_USERNAME"]
+		p @uname
+		p ENV["GMAIL_PASSWORD"]
+		p @pwd
+		puts "\n\n============\n\n"
+
+		
 		Gmail.connect( @uname, @pwd) do |gmail|
 			email = gmail.compose do
 	  			to "nick@vejy.club"
@@ -17,10 +26,5 @@ class NewHavenLead < ApplicationRecord
 			end
 			email.deliver!
 		end
-		puts "\n\n============\n\n"
-		p "output"
-		p ENV["GMAIL_USERNAME"]
-		p ENV["GMAIL_PASSWORD"]
-		puts "\n\n============\n\n"
 	end
 end
