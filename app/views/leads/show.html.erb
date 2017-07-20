@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @lead.name %>
+</p>
+
+<p>
+  <strong>Fav veg:</strong>
+  <%= @lead.fav_veg %>
+</p>
+
+<p>
+  <strong>Owner renter other:</strong>
+  <%= @lead.owner_renter_other %>
+</p>
+
+<p>
+  <strong>Indoor outdoor:</strong>
+  <%= @lead.indoor_outdoor %>
+</p>
+
+<p>
+  <strong>Space:</strong>
+  <%= @lead.space %>
+</p>
+
+<p>
+  <strong>Notes:</strong>
+  <%= @lead.notes %>
+</p>
+
+<%= link_to 'Edit', edit_lead_path(@lead) %> |
+<%= link_to 'Back', leads_path %>

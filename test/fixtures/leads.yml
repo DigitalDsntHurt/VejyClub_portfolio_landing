@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  fav_veg: MyString
+  owner_renter_other: MyString
+  indoor_outdoor: MyString
+  space: MyString
+  notes: MyString
+
+two:
+  name: MyString
+  fav_veg: MyString
+  owner_renter_other: MyString
+  indoor_outdoor: MyString
+  space: MyString
+  notes: MyString

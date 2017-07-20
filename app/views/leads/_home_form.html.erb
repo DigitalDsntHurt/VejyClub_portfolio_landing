@@ -1,0 +1,36 @@
+
+<%= form_for(lead) do |f| %>
+  <% if lead.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(lead.errors.count, "error") %> prohibited this lead from being saved:</h2>
+
+      <ul>
+      <% lead.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field form-group">
+    <%= f.text_field :name, :value => "  Your Name " %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.text_field :fav_veg, :value => "  Your 5 Favorite Vegetables" %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.text_field :notes, :value => "  Your Zip code " %>
+  </div>
+
+  <div class="field form-group">
+    <%= f.text_field :space, :value => "  Tell us about the space you have for growing" %>
+  </div>
+
+  
+
+  <div class="actions">
+    <%= f.submit "Join Vejy Club!", :class => "btn-default" %>
+  </div>
+<% end %>
