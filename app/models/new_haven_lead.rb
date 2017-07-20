@@ -17,7 +17,10 @@ class NewHavenLead < ApplicationRecord
 			end
 			email.deliver!
 		end
-		#p "output"
-		#p ENV["GMAIL_USERNAME"]
+		puts "\n\n============\n\n"
+		p "output"
+		p ENV["GMAIL_USERNAME"]
+		p ENV["GMAIL_PASSWORD"]
+		puts "\n\n============\n\n"
 	end
 end
