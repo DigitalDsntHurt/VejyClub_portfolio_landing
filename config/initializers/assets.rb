@@ -7,7 +7,7 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.paths << Emoji.images_path
 
 Rails.application.config.before_configuration do
-	env_file = File.join(Rails.root, 'config', 'local_env.yml')
+	env_file = File.join(Rails.root, 'config', 'initializers','local_env.yml')
 	YAML.load(File.open(env_file)).each do |key, value|
     	ENV[key.to_s] = value
 	end if File.exists?(env_file)
