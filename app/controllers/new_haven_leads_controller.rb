@@ -32,7 +32,7 @@ class NewHavenLeadsController < ApplicationController
         format.json { render '/grayscales/thank_you', status: :created, location: '/grayscales/thank_you' }
       else
         #format.html { redirect_back fallback_location: '/' }
-        format.html { redirect_to 'grayscales/form_land' }
+        format.html { redirect_to '/' }
         format.json { render json: @new_haven_lead.errors, status: :unprocessable_entity }
       end
     end
@@ -57,7 +57,7 @@ class NewHavenLeadsController < ApplicationController
   def destroy
     @new_haven_lead.destroy
     respond_to do |format|
-      format.html { redirect_to new_haven_leads_url, notice: 'New haven lead was successfully destroyed.' }
+      format.html { redirect_to '/', notice: 'New haven lead was successfully destroyed.' }
       format.json { head :no_content }
     end
   end

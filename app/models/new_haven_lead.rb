@@ -1,11 +1,15 @@
 class NewHavenLead < ApplicationRecord
-	#validates :name, :email, :zip, :presence => true
+	validates :name, :email, :zip, :presence => true
 	#validates :zip, :length => { :is => 5 }
 	#validates :email, :length => { :minimum => 9 }
-	after_create :send_nick_an_email
+	#after_create :send_nick_an_email
 
 	private
 	def send_nick_an_email
+		puts "============"
+		p ENV["GMAIL_USERNAME"]
+		p ENV["GMAIL_PASSWORD"]
+		puts "============"
 		Gmail.connect( ENV["GMAIL_USERNAME"], ENV["GMAIL_PASSWORD"]) do |gmail|
 			email = gmail.compose do
 	  			to "nick@vejy.club"
