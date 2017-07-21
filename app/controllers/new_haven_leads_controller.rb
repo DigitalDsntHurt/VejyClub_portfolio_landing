@@ -31,7 +31,8 @@ class NewHavenLeadsController < ApplicationController
         format.html { redirect_to '/grayscales/thank_you', notice: 'Welcome to the club!.' }
         format.json { render '/grayscales/thank_you', status: :created, location: '/grayscales/thank_you' }
       else
-        format.html { render :new }
+        #format.html { redirect_back fallback_location: '/' }
+        format.html { redirect_to 'grayscales/form_land' }
         format.json { render json: @new_haven_lead.errors, status: :unprocessable_entity }
       end
     end

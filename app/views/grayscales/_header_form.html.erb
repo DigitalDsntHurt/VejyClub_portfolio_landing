@@ -20,6 +20,18 @@
                 	<h2>Join The Club!</h2>
                 	
 	                <div style="background-color:white;opacity:0.7;padding:16px" >
+                    
+
+                          <% if @new_haven_lead.errors.any? %>
+                              <div id="error_explanation">
+                                    <h2><%= pluralize(@new_haven_lead.errors.count, "error") %> prohibited this new_haven_lead from being saved:</h2>
+                                    <ul>
+                                        <% @new_haven_lead.errors.full_messages.each do |message| %>
+                                            <li><%= message %></li>
+                                        <% end %>
+                                    </ul>
+                              </div>
+                          <% end %>                    
 	                	<%= render '/new_haven_leads/home_form', new_haven_lead: @new_haven_lead %>
 	                </div>
                 
