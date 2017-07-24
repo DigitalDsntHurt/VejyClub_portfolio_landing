@@ -23,10 +23,6 @@
   </div>
 
   <div class="field">
-    <%= f.select :customer_type, options_for_select(["Home Owner","Restaurant"]), :include_blank => "I'm a..." %>
-  </div>
-
-  <div class="field">
     <%= f.text_field :phone, :placeholder => "Phone"  %>
   </div>
 
@@ -35,7 +31,7 @@
   </div>
 
   <div class="field">
-    <%= f.text_area :space, :placeholder => "Tell us about the space you have for growing" %>
+    <%= f.text_area :space, :placeholder => "Tell us about yourself and the space you have for growing" %>
   </div>
 
   <div class="actions">
