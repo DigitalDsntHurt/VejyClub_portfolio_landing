@@ -13,13 +13,17 @@
   <div class="field">
     <%= f.text_field :name, :placeholder => "Name ( * required )" %>
   </div>
-  
+
+  <div class="field">
+    <%= f.text_field :email,:placeholder => "Email ( * required )" %>
+  </div>
+
   <div class="field">
     <%= f.text_field :zip, :placeholder => "Zip Code ( * required )" %>
   </div>
 
   <div class="field">
-    <%= f.text_field :email,:placeholder => "Email ( * required )" %>
+    <%= f.select :customer_type, options_for_select(["Home Owner","Restaurant"]), :include_blank => "I'm a..." %>
   </div>
 
   <div class="field">
@@ -31,7 +35,7 @@
   </div>
 
   <div class="field">
-    <%= f.text_area :space, :placeholder => "Tell us about the space you have for growing." %>
+    <%= f.text_area :space, :placeholder => "Tell us about the space you have for growing" %>
   </div>
 
   <div class="actions">

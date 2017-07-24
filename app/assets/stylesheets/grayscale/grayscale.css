@@ -475,6 +475,34 @@ body {
     margin-bottom: 6px;
 }
 
+.field select {
+    width: 100%;
+    height: 39px;
+    padding-left:6px;
+    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgba(0, 0, 0, .3);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 5px;
+    
+    color:black;
+    text-align: top;
+
+    margin-bottom: 6px;
+}
+
+.field select > option{
+    color:red;
+}
+
+#new_haven_lead_customer_type option {
+    text-decoration: underline;
+    color:black;
+    text-align: top;
+    }
+
 .btn-submit{
     width:100%;
     height: 39px;

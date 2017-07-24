@@ -70,6 +70,6 @@ class NewHavenLeadsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def new_haven_lead_params
-      params.require(:new_haven_lead).permit(:name, :fav_veg, :email, :phone, :zip, :space)
+      params.require(:new_haven_lead).permit(:name, :fav_veg, :email, :phone, :zip, :space, :customer_type)
     end
 end
